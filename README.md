@@ -10,6 +10,7 @@
 - CSS
 - JavaScript
 - Node.js
+- Express.js
 - Figma for design
 - MongoDB for database
 
@@ -26,19 +27,27 @@
 - Update user information for profile management.
 - Note ranking system based on upvotes and downvotes.
 
+  ## 🌟 Workflow
+  - From Home page we can go to login and signup page.
+  - From signup page, after signing redirect to login page.
+  - After logging profile page appears
+  - From profile we can navigate everywhere.
+  
+
 ---
 
 ## 🤝 Contributors
 
 ### Backend Developers:
 - [Md. Faysal Ahmmed (Lead Developer)](https://github.com/ahmmedfaysal)
-- [Md Sakibul Hassan Rifat](https://github.com/iamRiifat)
+
 
 ### Frontend Developers:
+- [Md. Faysal Ahmmed (Lead Developer)](https://github.com/ahmmedfaysal)
 - [Mehedi Hasan Anik](https://github.com/mehedihasananik232)
 - [Tanha Saeera Tamanna](https://github.com/tanhasaeera)
 - [Mst.Mahfuza khatun](https://github.com/Munne31)
-
+- [Md Sakibul Hassan Rifat](https://github.com/iamRiifat)
 ---
 
 ## 📄 License
