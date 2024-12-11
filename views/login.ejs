@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduNexus: Log in</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/imgs/logo.png" alt="EduNexus Logo" />
+      </div>
+      <nav>
+        <button class="btn about-us">About Us</button>
+        <a href="./guest.html" class="btn guest">Visit as Guest</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h1>EduNexus: <br /></h1>
+        <h2>Let’s Learn Together!</h2>
+      </section>
+
+      <div class="action-buttons">
+        <div class="action-left">
+          <p class="description">
+            Dive into a world of knowledge and collaboration. EduNexus is your
+            go-to platform for sharing, learning, and growing. Join our community
+            of students and unlock your full potential.
+          </p>
+          <button class="btn meet-team">Meet our team</button>
+        </div>
+        <div class="signup-from-login">
+          <p>Don't have an account?</p>
+          <a href="/signup" class="signup-from-login-btn">Sign up</a>
+        </div>
+
+        <!-- Login Form -->
+        <div >
+          <form action="/login" method="POST" class="login-info"> <!-- Specify POST method and /login endpoint -->
+            <p>E-mail</p>
+            <input type="email" id="email" name="email" class="box-style" required />
+
+            <p>Password</p>
+            <input type="password" id="password" name="password" class="box-style" required />
+
+            <button type="submit" class="btn-login">
+              <span>Login</span>
+              <img class="arrow-right-login" src="/imgs/arrowright.png" alt=""/>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
