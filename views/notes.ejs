@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduNexus: Notes</title>
+    <link rel="stylesheet" href="/notes_style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/imgs/logo.png" alt="EduNexus Logo" />
+        </div>
+        <nav>
+            <a href="/personal_profile" class="back">
+                <img class="arrowleft" src="/imgs/arrowleft.png" alt="">
+                <span class="back-text">Back</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="note-txt">
+            <button class="note-btn">Notes</button>
+        </div>
+        <div class="bar">
+            <input type="text" id="note-blog" name="note-blog" class="box-style" placeholder="Search notes...">
+            <img class="search-img" src="/imgs/upload_search.png" alt="search button">
+            <div class="upload">
+                <a href="/note_upload" class="upload-new-btn">
+                    <span class="upload-new-text">Upload New</span>
+                    <img class="plus-image" src="/imgs/plus.png" alt="plus sign">
+                </a>
+            </div>
+        </div>
+
+        <div class="bottom-show">
+            <div class="show-notes">
+                <p>Notes</p>
+                <% if (notes && notes.length > 0) { %>
+                    <% notes.forEach(note => { %>
+                        <div class="container">
+                            <a href="/uploads/<%= note.filename %>"  target="_blank"><span><%= note.title %></span></a>
+                            <a href="/personal_profile" target="_blank">By: <%= note.author %></a>
+                            <img class="more-img" src="/imgs/more.png" alt="more">
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <p>No notes uploaded yet.</p>
+                <% } %>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

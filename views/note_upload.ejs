@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduNexus: Upload Note</title>
+    <link rel="stylesheet" href="/signup_style.css">
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <img src="/imgs/black_logo.png" alt="EduNexus Logo" />
+      </div>
+      <nav>
+        <button class="btn help">Help</button>
+      </nav>
+    </header>
+
+    <main>
+        <div class="main-section">
+            <button class="btn-show-uploadnote">Upload note</button>
+            <div class="information1">
+                <!-- Start the form tag and add enctype="multipart/form-data" -->
+                <form action="/note_upload" method="POST" enctype="multipart/form-data">
+                    <label for="coursename">Course name</label>
+                    <input type="text" id="coursename" name="coursename" class="box-style">
+
+                    <label for="title">Note Title</label>
+                    <textarea id="title" name="title" class="box-style-big" cols="30" rows="5"></textarea>
+
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" class="box-style-big" cols="30" rows="5"></textarea>
+
+                    <!-- File Upload Input -->
+                    <label for="notefile">Upload File Below:</label>
+                    <div class="file-upload-container">
+                      <input type="file" id="notefile" name="notefile" class="file-input">
+                      <label for="notefile" class="choose">Choose File</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <input type="submit" value="Upload" class="submit">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
