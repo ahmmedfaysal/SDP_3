@@ -36,20 +36,65 @@
 
         <div class="bottom-show">
             <div class="show-notes">
-                <p>Notes</p>
                 <% if (notes && notes.length > 0) { %>
-                    <% notes.forEach(note => { %>
-                        <div class="container">
-                            <a href="/uploads/<%= note.filename %>"  target="_blank"><span><%= note.title %></span></a>
-                            <a href="/personal_profile" target="_blank">By: <%= note.author %></a>
-                            <img class="more-img" src="/imgs/more.png" alt="more">
-                        </div>
-                    <% }); %>
+                    <table class="notes-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Title</th>
+                                <th style="width: 40%;">Author</th>
+                                <th style="width: 10%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% notes.forEach(note => { %>
+                                <tr>
+                                    <td>
+                                        <a href="/uploads/<%= note.filename %>" target="_blank"><%= note.title %></a>
+                                    </td>
+                                    <td>
+                                        <a href="/personal_profile" target="_blank"><%= note.author %></a>
+                                    </td>
+                                    <td>
+                                        <img class="more-img" src="/imgs/more.png" alt="more">
+                                    </td>
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
                 <% } else { %>
                     <p>No notes uploaded yet.</p>
                 <% } %>
             </div>
+            
+            
         </div>
     </main>
+    <style>
+        .notes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.notes-table th,
+.notes-table td {
+    /* border: 1px solid #ddd; */
+    text-align: left;
+    padding: 8px;
+}
+
+
+.notes-table td a {
+    text-decoration: none;
+    color: #0d6efd;
+}
+
+.notes-table td img {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+    </style>
 </body>
 </html>
