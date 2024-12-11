@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduNexus: Sign Up</title>
+    <link rel="stylesheet" href="/signup_style.css">
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <img src="/imgs/black_logo.png" alt="EduNexus Logo" />
+      </div>
+      <nav>
+        <button class="btn help">Help</button>
+      </nav>
+    </header>
+
+    <main>
+        <div class="main-section">
+            <button class="btn-show-signup">Sign Up</button>
+            <div class="information">
+                <!-- Corrected Form -->
+                <form action="/signup" method="POST" class="information1">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="box-style" required>
+    
+                    <label for="dropdown">Department</label>
+                    <select id="dropdown" name="department" class="box-style" required>
+                        <option value="">Select department</option>
+                        <option value="CSE">CSE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="Civil">Civil</option>
+                        <option value="BBA">BBA</option>
+                        <option value="English">English</option>
+                        <option value="Law">Law</option>
+                        <option value="Economics">Economics</option>
+                        <option value="Mathematics">Mathematics</option>
+                    </select>
+    
+                    <label for="intake">Intake</label>
+                    <input type="number" id="intake" name="intake" class="box-style" required>
+    
+                    <label for="section">Section</label>
+                    <input type="number" id="section" name="section" class="box-style" required>
+    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="box-style" required>
+    
+                    <label for="number">Phone no.</label>
+                    <input type="tel" id="number" name="phone" class="box-style" required pattern="[0-9]{10}">
+    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="box-style" required>
+    
+                    <label for="retypePassword">Re-type Password</label>
+                    <input type="password" id="retypePassword" name="retypePassword" class="box-style" required>
+    
+                    <!-- Submit Button -->
+                    <button type="submit" class="save">
+                        Signup
+                        <img class="arrow-right" src="/imgs/arrowright.png" alt="">
+                    </button>
+                </form>
+    
+                <div class="Login-from-signup">
+                    <p>Already have an account?</p>
+                    <a href="/login" class="signup-login">Log in</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+  </body>
+</html>
